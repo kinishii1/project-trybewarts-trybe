@@ -15,6 +15,33 @@
 }
 
 #trybewarts-forms-logo {
-  width: 250px;
-  height: 250px;
+  height: 500px;
+}
+
+#evaluation-form {
+  display: flex;
+  flex-direction: column;
+  width: 675px
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.evaluation-form-inputs {
+  display: flex;
+
+}
+
+.evaluation-form-radio {
+  display: flex;
+}
+
+.evaluation-form-checkbox {
+  display: flex;
+}
+
+.evaluation-form-agreement {
+  display: flex;
 }

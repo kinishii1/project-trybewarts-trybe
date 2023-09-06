@@ -31,45 +31,52 @@
         id="trybewarts-forms-logo"
       />
       <form id="evaluation-form">
-        
+        <div class="evaluation-form-inputs">
           <input type="text" id="input-name" placeholder="Nome" />
           <input type="text" id="input-lastname" placeholder="Sobrenome" />
           <input type="email" id="input-email" placeholder="Email" />
 
-        <select name="" id="house">
-          <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-          <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-          <option value="Corvinode" id="corvinode-house">Corvinode</option>
-          <option value="Pytherina" id="pytherina-house">Pytherina</option>
-        </select>
+          <select name="" id="house">
+            <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+            <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+            <option value="Corvinode" id="corvinode-house">Corvinode</option>
+            <option value="Pytherina" id="pytherina-house">Pytherina</option>
+          </select>
+        </div>
 
-        <label id="label-family">Qual sua família?</label>
-        <input type="radio" name="family" value="Frontend" />
-        <input type="radio" name="family" value="Backend" />
-        <input type="radio" name="family" value="FullStack" />
+        <div class="evaluation-form-radio">
+          <label id="label-family">Qual sua família?</label>
+          <input type="radio" name="family" value="Frontend" />Frontend
+          <input type="radio" name="family" value="Backend" />Backend
+          <input type="radio" name="family" value="FullStack" />FullStack
+        </div>
 
         <label id="label-content"
           >Qual conteúdo você está com mais vontade de aprender?</label
         >
-        <input type="checkbox" class="subject" value="Comunicação" />
-        <input type="checkbox" class="subject" value="Trabalho em equipe" />
-        <input type="checkbox" class="subject" value="Negociação" />
-        <input type="checkbox" class="subject" value="Escuta ativa" />
-        <input type="checkbox" class="subject" value="Métodos de array" />
-        <input type="checkbox" class="subject" value="Jest" />
+        <div class="evaluation-form-checkbox">
+          <input type="checkbox" class="subject" value="Comunicação" />Comunicação
+          <input type="checkbox" class="subject" value="Trabalho em equipe" />Trabalho em equipe
+          <input type="checkbox" class="subject" value="Negociação" />Negociação
+          <input type="checkbox" class="subject" value="Escuta ativa" />Escuta ativa
+          <input type="checkbox" class="subject" value="Métodos de array" />Métodos de array
+          <input type="checkbox" class="subject" value="Jest" />Jest
+        </div>
+        <div class="evaluation-form-radio">
+          <label id="label-rate">Como você avalia a Trybewarts?</label>
+          <input type="radio" value="1" name="rate" />
+          <input type="radio" value="2" name="rate" />
+          <input type="radio" value="3" name="rate" />
+          <input type="radio" value="4" name="rate" />
+          <input type="radio" value="5" name="rate" />
+          <input type="radio" value="6" name="rate" />
+          <input type="radio" value="7" name="rate" />
+          <input type="radio" value="8" name="rate" />
+          <input type="radio" value="9" name="rate" />
+          <input type="radio" value="10" name="rate" />
+        </div>
 
-        <label id="label-rate">Como você avalia a Trybewarts?</label>
-        <input type="radio" value="1" name="rate" />
-        <input type="radio" value="2" name="rate" />
-        <input type="radio" value="3" name="rate" />
-        <input type="radio" value="4" name="rate" />
-        <input type="radio" value="5" name="rate" />
-        <input type="radio" value="6" name="rate" />
-        <input type="radio" value="7" name="rate" />
-        <input type="radio" value="8" name="rate" />
-        <input type="radio" value="9" name="rate" />
-        <input type="radio" value="10" name="rate" />
-
+        <div class="evaluation-form-textarea">
         <label class="textarea"
           >Descreva os principais pontos de aprendizado até aqui (1 hard skill /
           1 soft skill):</label
@@ -84,12 +91,14 @@
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</textarea
         >
         <p id="counter">500</p>
+      </div>
 
+      <div class="evaluation-form-agreement">
         <label for="agreement"
           >Você concorda com o uso das informações acima?</label
         >
         <input type="checkbox" id="agreement" />
-
+      </div>
         <input type="submit" id="submit-btn" value="Enviar" />
       </form>
       <div id="form-data">
