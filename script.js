@@ -1,37 +1,32 @@
-const enterButton = document.querySelector("#enter-button");
-const agreementCheckbox = document.querySelector("#agreement");
-const submitButton = document.querySelector("#submit-btn");
-const counterElement = document.querySelector("#counter");
-const textarea = document.querySelector("#textarea");
-const inputName = document.querySelector("#input-name");
-const inputEmail = document.querySelector("#input-email");
-const inputLastName = document.querySelector("#input-lastname");
-const inputHouse = document.querySelector("#house");
-const inputFamily = document.querySelectorAll(
-  'input[type="radio"][name="family"]'
-);
-const inputTechnologies = document.querySelectorAll(
-  'input[type="checkbox"][class="subject"]'
-);
-const inputRates = document.querySelectorAll(
-  'input[type="radio"][name="rate"]'
-);
-const inputTextArea = document.querySelector("#textarea");
+const enterButton = document.querySelector('#enter-button');
+const agreementCheckbox = document.querySelector('#agreement');
+const submitButton = document.querySelector('#submit-btn');
+const counterElement = document.querySelector('#counter');
+const textarea = document.querySelector('#textarea');
+const inputName = document.querySelector('#input-name');
+const inputEmail = document.querySelector('#input-email');
+const inputLastName = document.querySelector('#input-lastname');
+const inputHouse = document.querySelector('#house');
+const inputFamily = document.querySelectorAll('input[type="radio"][name="family"]');
 
-const dataForm = document.querySelector('#form-data')
-const mainForm = document.querySelector('#evaluation-form')
+const inputTechnologies = document.querySelectorAll('input[type="checkbox"][class="subject"]');
+const inputRates = document.querySelectorAll('input[type="radio"][name="rate"]');
+const inputTextArea = document.querySelector('#textarea');
+
+const dataForm = document.querySelector('#form-data');
+const mainForm = document.querySelector('#evaluation-form');
 
 const validyLogin = () => {
-  const email = document.querySelector("#enter-email").value;
-  const password = document.querySelector("#enter-password").value;
-  if (email === "tryber@teste.com" && password === "123456") {
-    return window.alert("Olá, Tryber!");
+  const email = document.querySelector('#enter-email').value;
+  const password = document.querySelector('#enter-password').value;
+  if (email === 'tryber@teste.com' && password === '123456') {
+    return window.alert('Olá, Tryber!');
   }
-  window.alert("Email ou senha inválidos.");
+  window.alert('Email ou senha inválidos.');
 };
 
 submitButton.disabled = true;
-agreementCheckbox.checked = false
+agreementCheckbox.checked = false;
 
 function verifyAgreement() {
   if (agreementCheckbox.checked) {
@@ -41,24 +36,24 @@ function verifyAgreement() {
   }
 }
 
-textarea.addEventListener("input", () => {
+textarea.addEventListener('input', () => {
   const counter = 500 - textarea.value.length;
   counterElement.innerText = `${counter} / 500`;
 });
 
-agreementCheckbox.addEventListener("click", verifyAgreement);
-enterButton.addEventListener("click", validyLogin);
+agreementCheckbox.addEventListener('click', verifyAgreement);
+enterButton.addEventListener('click', validyLogin);
 
-const nomeElement = document.getElementById("nome");
-const emailElement = document.getElementById("email");
-const casaElement = document.getElementById("casa");
-const familiaElement = document.getElementById("familia");
-const materiasElement = document.getElementById("materias");
-const notaElement = document.getElementById("nota");
-const obsElement = document.getElementById("obs");
+const nomeElement = document.getElementById('nome');
+const emailElement = document.getElementById('email');
+const casaElement = document.getElementById('casa');
+const familiaElement = document.getElementById('familia');
+const materiasElement = document.getElementById('materias');
+const notaElement = document.getElementById('nota');
+const obsElement = document.getElementById('obs');
 
 const createRate = () => {
-  let rateVal = "";
+  let rateVal = '';
   inputRates.forEach((rate) => {
     if (rate.checked) {
       rateVal = rate.value;
@@ -78,7 +73,7 @@ const createTechnologies = () => {
       tecs.push(tec.value);
     }
   });
-  materiasElement.innerText = `Matérias: ${tecs.join(", ")}`;
+  materiasElement.innerText = `Matérias: ${tecs.join(', ')}`;
 };
 
 const createFinalDocument = () => {
@@ -95,10 +90,9 @@ const createFinalDocument = () => {
     createRate();
     createMessage();
 
-    mainForm.style.display = 'none'
-    dataForm.style.display = 'block'
-
+    mainForm.style.display = 'none';
+    dataForm.style.display = 'block';
   });
 };
 
-submitButton.addEventListener("click", createFinalDocument);
+submitButton.addEventListener('click', createFinalDocument);
