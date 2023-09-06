@@ -50,36 +50,40 @@
         id="trybewarts-forms-logo"
       />
       <form id="evaluation-form">
-        <legend class="display-6">Formulário</legend>
+        <legend class="display-6">Formulário de Avaliação</legend>
         <fieldset class="evaluation-form-inputs">
-          <input
-            class="form-control"
-            type="text"
-            id="input-name"
-            placeholder="Nome"
-          />
-          <input
-            class="form-control"
-            type="text"
-            id="input-lastname"
-            placeholder="Sobrenome"
-          />
-          <input
-            class="form-control"
-            type="email"
-            id="input-email"
-            placeholder="Email"
-          />
+          <section>
+            <input
+              class="form-control"
+              type="text"
+              id="input-name"
+              placeholder="Nome"
+            />
+            <input
+              class="form-control"
+              type="email"
+              id="input-email"
+              placeholder="Email"
+            />
+          </section>
+          <section>
+            <input
+              class="form-control"
+              type="text"
+              id="input-lastname"
+              placeholder="Sobrenome"
+            />
 
-          <select class="form-select form-select-sm" name="" id="house">
-            <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-            <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-            <option value="Corvinode" id="corvinode-house">Corvinode</option>
-            <option value="Pytherina" id="pytherina-house">Pytherina</option>
-          </select>
+            <select class="form-select form-select-sm" name="" id="house">
+              <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+              <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+              <option value="Corvinode" id="corvinode-house">Corvinode</option>
+              <option value="Pytherina" id="pytherina-house">Pytherina</option>
+            </select>
+          </section>
         </fieldset>
 
-        <fieldset class="evaluation-form-radio">
+        <fieldset class="evaluation-form-check-radio">
           <div>
             <label class="form-check-label" for="" id="label-family"
               >Qual sua família?</label
@@ -101,60 +105,75 @@
               <label for="" class="form-check-label">FullStack</label>
             </div>
           </div>
+
+          <div class="column">
+            <label form-check-label id="label-content"
+              >Qual conteúdo você está com mais vontade de aprender?</label
+            >
+            <div>
+              <input
+                type="checkbox"
+                class="subject"
+                value="Comunicação"
+              />Comunicação
+              <input
+                type="checkbox"
+                class="subject"
+                value="Trabalho em equipe"
+              />Trabalho em equipe
+              <input
+                type="checkbox"
+                class="subject"
+                value="Negociação"
+              />Negociação
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                class="subject"
+                value="Escuta ativa"
+              />Escuta ativa
+              <input
+                type="checkbox"
+                class="subject"
+                value="Métodos de array"
+              />Métodos de array
+              <input type="checkbox" class="subject" value="Jest" />Jest
+            </div>
+          </div>
         </fieldset>
 
-        <label id="label-content"
-          >Qual conteúdo você está com mais vontade de aprender?</label
-        >
-        <fieldset class="evaluation-form-checkbox">
-          <input
-            type="checkbox"
-            class="subject"
-            value="Comunicação"
-          />Comunicação
-          <input
-            type="checkbox"
-            class="subject"
-            value="Trabalho em equipe"
-          />Trabalho em equipe
-          <input type="checkbox" class="subject" value="Negociação" />Negociação
-          <input type="checkbox" class="subject" value="Escuta ativa" />Escuta
-          ativa
-          <input
-            type="checkbox"
-            class="subject"
-            value="Métodos de array"
-          />Métodos de array
-          <input type="checkbox" class="subject" value="Jest" />Jest
-        </fieldset>
+        <fieldset class="evaluation-form-checkbox"></fieldset>
         <fieldset class="evaluation-form-radio">
           <label id="label-rate">Como você avalia a Trybewarts?</label>
-          <input type="radio" value="1" name="rate" />
-          <input type="radio" value="2" name="rate" />
-          <input type="radio" value="3" name="rate" />
-          <input type="radio" value="4" name="rate" />
-          <input type="radio" value="5" name="rate" />
-          <input type="radio" value="6" name="rate" />
-          <input type="radio" value="7" name="rate" />
-          <input type="radio" value="8" name="rate" />
-          <input type="radio" value="9" name="rate" />
-          <input type="radio" value="10" name="rate" />
+          <input type="radio" value="1" name="rate" />1
+          <input type="radio" value="2" name="rate" />2
+          <input type="radio" value="3" name="rate" />3
+          <input type="radio" value="4" name="rate" />4
+          <input type="radio" value="5" name="rate" />5
+          <input type="radio" value="6" name="rate" />6
+          <input type="radio" value="7" name="rate" />7
+          <input type="radio" value="8" name="rate" />8
+          <input type="radio" value="9" name="rate" />9
+          <input type="radio" value="10" name="rate" />10
         </fieldset>
 
         <fieldset class="evaluation-form-textarea">
-          <label class="textarea"
-            >Descreva os principais pontos de aprendizado até aqui (1 hard skill
-            / 1 soft skill):</label
-          >
-          <textarea
-            maxlength="500"
-            minlength="20"
-            cols="30"
-            rows="10"
-            id="textarea"
-          >
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</textarea
-          >
+          <div class="form-floating">
+            <textarea
+              class="form-control"
+              maxlength="500"
+              minlength="20"
+              style="height: 150px"
+              id="textarea"
+            >
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur reprehenderit, tempora repellat ad eum</textarea
+            >
+            <label class='textarea' for="floatingTextarea"
+              >Descreva os principais pontos de aprendizado até aqui (1 hard
+              skill / 1 soft skill):</label
+            >
+          </div>
           <p id="counter">500 / 500</p>
         </fieldset>
 
@@ -162,20 +181,25 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</textarea
           <label id="label-infos" for="agreement"
             >Você concorda com o uso das informações acima?</label
           >
-          <input type="checkbox" id="agreement" />
+          <input type="checkbox" id="agreement" checked="false"/>
         </fieldset>
-        <button type="submit" id="submit-btn" disabled>Enviar</button>
+        <button
+          class="btn btn-secondary"
+          type="submit"
+          id="submit-btn"
+        >Enviar</button>
       </form>
 
       <div id="form-data">
-        <p>Nome: Alguem Aqui</p>
-        <p>Email: email@mail.com</p>
-        <p>Casa: Casa Escolhida</p>
-        <p>Família: Família Escolhida</p>
-        <p>Matérias: Matérias, Marcadas, Aqui</p>
-        <p>Avaliação: NotaAqui</p>
-        <p>Observações: Observações aqui</p>
+        <p id="nome">Nome: Alguem Aqui</p>
+        <p id="email">Email: email@mail.com</p>
+        <p id="casa">Casa: Casa Escolhida</p>
+        <p id="familia">Família: Família Escolhida</p>
+        <p id="materias">Matérias: Matérias, Marcadas, Aqui</p>
+        <p id="nota">Avaliação: NotaAqui</p>
+        <p id="obs">Observações: Observações aqui</p>
       </div>
+
     </main>
     <footer>
       <p>Direitos reservados à Trybewarts©</p>

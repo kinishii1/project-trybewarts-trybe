@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #efefef;
+  font-weight: 500;
+}
+
 .evaluation-form-inputs,
 .evaluation-form-checkbox,
 .evaluation-form-agreement {
@@ -43,11 +48,18 @@
 
 /* evaluation form */
 
+legend{
+  text-align: center;
+}
 #evaluation-form {
   display: flex;
   flex-direction: column;
   width: 675px;
   order: 1;
+}
+
+#evaluation-form div {
+  margin-bottom: 10px;
 }
 
 #evaluation-form input {
@@ -62,6 +74,23 @@
   opacity: 60%;
 }
 
+.evaluation-form-radio{
+ font-size: 12px;
+}
+
+.evaluation-form-inputs {
+  width: 100%;
+  gap: 10px;
+}
+
+.form-select{
+  padding: 7px;
+  margin-left: 9px;
+}
+
+.form-select option{
+  text-align: center;
+}
 
 #enter-button {
   padding-left: 25px;
@@ -74,8 +103,6 @@
   order: 2;
 }
 
-
-
 main {
   display: flex;
   justify-content: space-around;
@@ -85,3 +112,27 @@ main {
   display: none;
 }
 
+#submit-btn {
+  background-color: #4e2c83;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.evaluation-form-check-radio {
+  display: flex;
+  gap: 30px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+select{
+  text-align-last:center;
+}
