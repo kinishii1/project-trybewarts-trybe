@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+.evaluation-form-inputs,
+.evaluation-form-checkbox,
+.evaluation-form-agreement {
+  display: flex;
+}
+
+/* header */
+
 .header {
   display: flex;
   background-color: rgb(50, 167, 145);
@@ -13,8 +21,8 @@
 }
 
 .trybewarts-header-logo {
-  width: 150px;
-  height: 150px;
+  width: 75px;
+  height: 75px;
 }
 
 .trybewarts-login {
@@ -27,15 +35,13 @@
 
 #trybewarts-header-title {
   color: white;
-  font-size: 50px;
+  font-size: 60px;
   text-align: center;
   align-self: center;
 }
 
-#trybewarts-forms-logo {
-  height: 500px;
-  order: 2;
-}
+
+/* evaluation form */
 
 #evaluation-form {
   display: flex;
@@ -44,27 +50,38 @@
   order: 1;
 }
 
+#evaluation-form input {
+  margin: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#evaluation-form input::placeholder{
+  text-align: center;
+  color:black;
+  opacity: 60%;
+}
+
+
+#enter-button {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+
+#trybewarts-forms-logo {
+  height: 500px;
+  order: 2;
+}
+
+
+
 main {
   display: flex;
   justify-content: space-around;
 }
 
-.evaluation-form-inputs {
-  display: flex;
-}
-
-.evaluation-form-radio {
-  display: flex;
-}
-
-.evaluation-form-checkbox {
-  display: flex;
-}
-
-.evaluation-form-agreement {
-  display: flex;
-}
-
 #form-data {
   display: none;
 }
+
